@@ -1,0 +1,80 @@
+/*
+	---------------------------------------------------------
+	Layout
+	---------------------------------------------------------
+	Main layout (header / body / etc)
+*/
+body {
+	font-family:'Helvetica Neue', sans-serif;
+	height: 100%;
+	color: #545454;
+	background-image: url(/assets/images/bg.png);
+	background-repeat: repeat;
+	line-height: auto;
+}
+
+html {
+    overflow-x: hidden;
+  	overflow-y: auto;
+}
+
+
+
+.header {
+	height: auto;
+	padding: 0px 0px 10px 0px;
+	margin: 0px auto;
+	border-bottom: 1px solid #26364d;
+}
+
+.profile {
+	background: #393939;
+	font-weight: 700;
+	color: #fff;
+	float:right;
+	padding: 5px 10px 10px 10px;
+	margin-top: 10px;
+}
+
+.profile a {
+	color: #fff;
+	font-size: 11px;
+}
+
+.profile a:hover {
+	color: #215b95;
+}
+
+.container {
+	position: relative;
+	width:1100px;
+	min-height: 700px;
+	height:auto;
+	background: #fff;
+	padding: 0px 20px 10px 20px;
+}
+
+.container.body {
+	width:100%;
+	min-height:600px;
+}
+
+
+/*
+	---------------------------------------------------------
+	Defaults
+	---------------------------------------------------------
+	Default classes for boxes, panels, grids and other stuff
+*/
+
+.clear {
+	clear:both;
+}
+
+.bold {
+	font-weight: bold;	
+}
+
+.inline {
+	display: inline-block;
+}
