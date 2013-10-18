@@ -1,11 +1,18 @@
+@(menuselected: String, brdcumb: String)
+
+@css(item: String) = @{
+	if(item == menuselected) {
+		"active"
+	}
+}
 <ul class="nav nav-pills">
-	<li class="active">
-		<a href="#">Home</a>
+	<li class="@css("home")">
+		<a href="@routes.Application.index">Home</a>
 	</li>
 	<li>
 		<a href="#">Help</a>
 	</li>
-	<li class="dropdown">
+	<li class="dropdown @css("documents")">
 		<a class="dropdown-toggle" href="#" data-toggle="dropdown"> Documents <b class="caret"></b> </a>
 		<ul class="dropdown-menu">
 			<li>
@@ -23,15 +30,16 @@
 			</li>
 		</ul>
 	</li>
-	<li class="dropdown">
+	<li class="dropdown  @css("collection")">
 		<a class="dropdown-toggle" href="#" data-toggle="dropdown"> Collection <b class="caret"></b> </a>
 		<ul class="dropdown-menu">
 			<li>
-				<a href="#">CDs</a>
+				<a href="@routes.Movies.loadmoviepage">Movies</a>
 			</li>
 			<li>
-				<a href="#">DVDs</a>
+				<a href="#">MP3s</a>
 			</li>
 		</ul>
 	</li>
 </ul>
+<p style="font-weight:bold; font-size:11px; color:#2C1C3D;">@brdcumb</p>

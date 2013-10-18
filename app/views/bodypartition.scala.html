@@ -1,7 +1,7 @@
-@(head: String, title: String)(content: Html)
+@(head: String, title: String, menuselected: String, brdcumb: String)(content: Html)
 
 @main(head, title) {
 	@header()
-	@menu()
+	@menu(menuselected, brdcumb)
 	@content
 }

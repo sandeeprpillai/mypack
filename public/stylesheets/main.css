@@ -114,3 +114,9 @@ a {
     border-top-color: #423456;
     margin-top: 6px;
 }
+
+.nav {
+    list-style: none outside none;
+    margin-bottom: 0px;
+    margin-left: 0;
+}
