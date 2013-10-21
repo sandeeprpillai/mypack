@@ -1,4 +1,78 @@
-
+@(movieList: List[Movie])
 @bodypartition("Welcome Movie", "Movie", "collection", "Collections >> Movies") {
-	
+	<div style="float: right;padding:2px">
+		<a data-toggle="modal"  href="#myModal" class="btn btn-inverse btn-mini">
+			<i class="icon-white icon-plus"> </i>
+		</a>
+		<a href="#" class="btn btn-inverse btn-mini">
+			<i class="icon-white icon-trash"> </i>
+		</a>
+	</div>
+	<br>
+	<div class="MyPackTable">
+		<table>
+			<tr>
+				<td>Sl No.</td>
+				<td>Name</td>
+				<td>Language</td>
+				<td>Type</td>
+			</tr>
+			@for(movie <- movieList) {
+				<tr>
+					<td>Sl No.</td>
+					<td>movie.name</td>
+					<td>movie.language</td>
+					<td>movie.type</td>
+				</tr>
+			}
+		</table>
+	</div>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						&times;
+					</button>
+					<h4 class="modal-title">Add Movies</h4>
+				</div>
+				<div class="modal-body">
+					<div style="float: right;padding:2px">
+						<a href="#" class="btn btn-inverse btn-mini">
+							<i class="icon-white icon-plus"> </i>
+						</a>
+						<a href="#" class="btn btn-inverse btn-mini">
+							<i class="icon-white icon-trash"> </i>
+						</a>
+						<a href="#" onclick="javascript:Movies.savemovie();" class="btn btn-inverse btn-mini">
+							<i class="icon-white icon-ok"> </i>
+						</a>
+					</div>
+					<br>
+					<div class="MyPackTable">
+						<table>
+							<tr>
+								<td>Name</td>
+								<td>Language</td>
+								<td>Type</td>
+							</tr>
+							<tr id="addRow">
+								<td><input name="name" type="text" value=""></td>
+								<td><input name="language" type="text" value=""></td>
+								<td><input name="type" type="text" value=""></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">
+						Close
+					</button>
+					<button type="button" class="btn btn-primary">
+						Save changes
+					</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
 }
